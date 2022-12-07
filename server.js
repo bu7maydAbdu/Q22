@@ -19,9 +19,18 @@ app.use(express.json())
 const token = process.env.token
 const baseUrl = process.env.baseUrl
 const url = `${baseUrl}/standings`
+const teams = `${baseUrl}/teams`
 
 
 app.get("/", (req , res) => {
+    axios.get(teams,{
+        headers: {
+            "X-Auth-Token" : token
+        }
+    })
+    .then((response) => {
+        console.log(response.data)
+    })
     axios.get(url,{
         headers: {
             "X-Auth-Token" : token
