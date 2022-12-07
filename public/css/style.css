@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kumbh+Sans:wght@400;700&display=swap');
+*, *::before , *::after{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url("/images/pattern.png");
+    background-color: #811538 !important;
+    
+}
+#header {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    /* clip-path: polygon(0 0, 100% 0, 100% 60%, 51% 100%, 46% 100%, 0% 60%, 0 23%); */
+    /* clip-path: polygon(49% 21%, 100% 0, 100% 60%, 51% 100%, 46% 100%, 0% 60%, 0 0); */
+    /* clip-path: polygon(15% 41%, 88% 41%, 100% 0, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0 0); */
+    /* clip-path: polygon(15% 41%, 88% 41%, 100% 48%, 100% 63%, 88% 68%, 14% 69%, 0 62%, 0 51%); */
+    /* clip-path: polygon(12% 25%, 90% 25%, 100% 48%, 100% 63%, 90% 85%, 12% 85%, 0 62%, 0 51%); */
+    /* clip-path: polygon(0 0, 50% 100%, 100% 0); */
+    clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
+
+
+
+}
+
+#hayafooty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    top: 0;
+    left: 0;
+    color: white;
+    font-weight: 800;
+    background-color: #811538 !important;
+    background-image: url("/images/pattern.png");
+    clip-path: polygon(0 0, 100% 0%, 100% 87%, 0 71%);
+
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#hayafooty h1 {
+    transform: rotate(5deg);
+}
+
+
+.bg-secondary {
+    /* background: #811538 !important; */
+    /* background-color: #811538 !important; */
+    background: white;
+}
+
+#header-background {
+    width: 100%;
+    height: 100%;
+    /* background-image: url("/public/images/pattern.png"); */
+
+}
+
+#header-logo {
+    position: absolute;
+    z-index: 1000;
+    left:30%;
+    top: 100px;
+
+}
+
+#logo-img {
+    height: 300px;
+    filter: drop-shadow(5px 5px 30px #666666);
+}
+
+.qatar-text-div {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    /* right: 27%; */
+    /* top: 150px; */
+    top: 10px;
+    left:35%; 
+    /* transform: rotate(-18deg); */
+    width: 30rem;
+
+}
+
+.qatar-word {
+
+    width: 30rem;
+    /* filter: drop-shadow(5px 5px 40px #666666); */
+
+
+}
+
+
+.laeb-div {
+    position: absolute;
+    z-index: 1000;
+    top: 180px;
+    left: 50px;
+}
+
+
+.laeb {
+    filter: drop-shadow(5px 5px 50px #666666);
+
+}
