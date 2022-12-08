@@ -225,3 +225,29 @@ backdrop-filter: blur(5px);
 }
 
 
+.match-fixure {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 10px 0;
+}
+
+.fixure-crest {
+    width: 30px;
+}
+
+.team1 , .team2 {
+    display: flex;
+}
+
+.score {
+    display: flex;
+    margin: 0 50px;
+    border: 1px solid purple;
+}
+
+.score h3 {
+    margin: 0 50px;
+}

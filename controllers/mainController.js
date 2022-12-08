@@ -27,9 +27,9 @@ module.exports = {
                 }
             })
 
-           const search = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
+           const currentMatchesSearch = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
-           console.log(search)
+           console.log(currentMatchesSearch)
 
              
         // console.log(matchesData.data.matches)
@@ -39,7 +39,7 @@ module.exports = {
                     "X-Auth-Token" : token
                 }
             })
-            res.render("index.ejs",{teams : teamsData.data , matches : matchesData.data.matches})
+            res.render("index.ejs",{teams : teamsData.data , matches : currentMatchesSearch})
         }catch(err){
             console.log(err)
         }

@@ -89,8 +89,30 @@
 
         <% for(let i=0; i < matches.length; i++) {%>
                 
-    
-          <h1><%= matches[i].homeTeam.name %>  </h1>
+              <section class="match-fixure">
+                   <section class="team1">
+                    <h3><%= matches[i].homeTeam.tla %>  </h3>
+                    <img class="fixure-crest" src="<%= matches[i].homeTeam.crest %>" alt="">
+                   </section>
+
+                   <section class="score">
+                         <h3>
+                              -
+                         </h3>
+                         <h3>
+                            VS
+                         </h3>
+                         <h3>
+                            -
+                         </h3>
+                   </section>
+
+                   <section class="team2">
+                    <h3><%= matches[i].awayTeam.tla %>  </h3>
+                    <img class="fixure-crest" src="<%= matches[i].awayTeam.crest %>" alt="">
+                   </section>
+                
+              </section>
 
       
         
