@@ -33,17 +33,39 @@
  
 
  </section>
+    
 
  
 </header>
 
 
+<section class="marquee-section">
+    <h1 class="section-title">Participant</h1>'
+    
+    <section class="marquee-container">
+        <marquee loop="infinite" class="teamsMarquee" behavior="" direction="right" scrollamount="10">
 
-
-<section>
-    <marquee behavior="" direction="ltr">
-    </marquee>
+            <section class="teams-logos">
+    
+                <% for(let i=0; i < teams.length; i++) {%>
+                
+    
+                        <img class="scrolling-crest" src="<%= teams[i].crest %>" alt="">
+        
+        
+                  
+                    
+          
+              <% } %> 
+    
+            </section>
+           
+         </marquee>
+    </section>
+    
 </section>
+
+
     
 
 <%- include('partials/footer') -%>

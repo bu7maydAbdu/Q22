@@ -4,6 +4,7 @@ const PORT = 8000
 const app = express()
 const cors = require("cors")
 require('dotenv').config({path: './config/.env'})
+const mainRoute = require("./routes/main")
 
 
 
@@ -22,25 +23,29 @@ const url = `${baseUrl}/standings`
 const teams = `${baseUrl}/teams`
 
 
-app.get("/", (req , res) => {
-    axios.get(teams,{
-        headers: {
-            "X-Auth-Token" : token
-        }
-    })
-    .then((response) => {
-        console.log(response.data)
-    })
-    axios.get(url,{
-        headers: {
-            "X-Auth-Token" : token
-        }
-    })
-    .then((response) => {
-        console.log(response.data)
-    })
-    res.render("index.ejs")
-})
+
+
+app.use("/", mainRoute)
+
+// app.get("/", (req , res) => {
+//     axios.get(teams,{
+//         headers: {
+//             "X-Auth-Token" : token
+//         }
+//     })
+//     .then((response) => {
+//         console.log(response.data)
+//     })
+//     axios.get(url,{
+//         headers: {
+//             "X-Auth-Token" : token
+//         }
+//     })
+//     .then((response) => {
+//         console.log(response.data)
+//     })
+//     res.render("index.ejs")
+// })
 
 
 
