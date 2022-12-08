@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee+Spice&family=Faster+One&family=Kaushan+Script&family=Libre+Barcode+39+Text&family=Merienda:wght@400;500;600;700&family=Mitr:wght@400;600;700&family=Modak&family=Montserrat+Subrayada:wght@700&family=Nabla&family=Parisienne&family=Passion+One&family=Poppins:ital,wght@0,400;0,500;0,700;1,700&family=Press+Start+2P&family=Righteous&family=Roboto&family=Russo+One&display=swap');
 *, *::before , *::after{
     padding: 0;
     margin: 0;
+    border: none;
+}
+.bg-primary {
+    color: #811538 !important;
+
+}
+
+.purpleborder {
+    border-bottom : 2px solid #811538 !important;
+
 }
 body {
+    width: 100vw;
     background-image: url("/images/pattern.png");
     background-color: #811538 !important;
+    background-repeat: repeat-y;
     
 }
 #header {
     display: flex ;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     height: 20rem;
     background: papayawhip;
     /* clip-path: polygon(0 0, 100% 0, 100% 60%, 51% 100%, 46% 100%, 0% 60%, 0 23%); */
@@ -55,6 +69,11 @@ body {
     transform: rotate(5deg);
 }
 
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
 
 .bg-secondary {
     /* background: #811538 !important; */
@@ -121,6 +140,8 @@ body {
 .section-title {
     font-size: 50px;
     color:  papayawhip;
+    font-family: 'Merienda', cursive;
+    border-bottom : 2px solid papayawhip;
 }
 
 
@@ -135,6 +156,7 @@ body {
 
 .marquee-container {
     margin-top: 50px;
+    padding: 20px 0;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -163,7 +185,43 @@ backdrop-filter: blur(5px);
 }
 
 .scrolling-crest {
-    margin:  0 20px;
+    margin:  0 30px;
     width: 80px;
     height: 80px;
 }
+
+.current-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: black; */
+    width: fit-content;
+    /* margin: 120px auto; */
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+
+.current-stage h2  {
+    margin-top: 50px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Merienda', cursive;
+}
+
+
+.next-fixures-section {
+    background-color: papayawhip;
+    text-align: center;
+    background-image: url("/images/pattern.png");
+    min-height: 100px;
+    
+}
+
+.next-fixures-section h1 {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+

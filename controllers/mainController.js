@@ -6,6 +6,7 @@ const token = process.env.token
 const baseUrl = process.env.baseUrl
 const url = `${baseUrl}/standings`
 const teamsUrl = `${baseUrl}/teams`
+const matchesUrl = `${baseUrl}/matches`
 
 module.exports = {
     getMain : async (req, res) => {
@@ -18,14 +19,27 @@ module.exports = {
                 }
             })
 
-            console.log(teamsData.data.teams)
+            // console.log(teamsData.data.season)
+
+         const matchesData =   await axios.get(matchesUrl,{
+                headers: {
+                    "X-Auth-Token" : token
+                }
+            })
+
+           const search = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
+
+           console.log(search)
+
+             
+        // console.log(matchesData.data.matches)
          
          await axios.get(url,{
                 headers: {
                     "X-Auth-Token" : token
                 }
             })
-            res.render("index.ejs",{teams : teamsData.data.teams})
+            res.render("index.ejs",{teams : teamsData.data , matches : matchesData.data.matches})
         }catch(err){
             console.log(err)
         }
