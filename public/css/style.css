@@ -127,14 +127,16 @@ body {
 .laeb-div {
     position: absolute;
     z-index: 1000;
-    top: 180px;
+    top: 250px;
     left: 50px;
+    transform: rotate(8deg);
 }
 
 
 .laeb {
     filter: drop-shadow(5px 5px 50px #666666);
-
+    width: 100%;
+    height: 100%;
 }
 
 .section-title {
@@ -215,39 +217,203 @@ backdrop-filter: blur(5px);
     background-color: papayawhip;
     text-align: center;
     background-image: url("/images/pattern.png");
-    min-height: 100px;
-    
+    min-height: fit-content;
+    padding-bottom: 50px;
 }
 
 .next-fixures-section h1 {
     width: fit-content;
     margin: 0 auto;
 }
-
+.next-fixures-section h2 {
+    height: 100px;
+}
 
 .match-fixure {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    /* border: 1px solid #811538; */
     width: fit-content;
-    margin: 10px auto;
-    padding: 10px 0;
+    margin: 50px auto;
+    height: 50px;
+    font-family: 'Merienda', cursive;
+    border-radius: 16px;
+    background-color: papayawhip;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
 }
 
 .fixure-crest {
     width: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
 }
 
 .team1 , .team2 {
     display: flex;
+     height: 100% !important;
+     background-color: #811538;
+    /* border: 1px solid papayawhip; */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+}
+.team1 {
+    border-radius: 16px 0 0 16px;
+}
+
+.team2 {
+    border-radius: 0 16px 16px 0;
+}
+.team1 h3  , .team2 h3 {
+    color: papayawhip;
+     margin: 0 10px;
 }
 
 .score {
     display: flex;
-    margin: 0 50px;
-    border: 1px solid purple;
+    justify-content: space-between;
+    align-items: center;
+        margin: 0 50px;
+    /* border: 1px solid purple; */
 }
 
 .score h3 {
     margin: 0 50px;
+}
+
+
+
+
+@media all and (max-width : 1311px) {
+    .qatar-text-div  , .qatar-word{
+        width: 20rem;
+    }
+    .laeb-div {
+      width: 280px;
+    }
+}
+
+
+@media all and (max-width : 1059px) {
+   .laeb-div {
+    top: 280px;
+   }
+   #logo-img {
+    height: 250px;
+   }
+}
+
+
+
+@media all and (max-width : 928px) {
+    .qatar-text-div  , .qatar-word{
+        width: 20rem;
+        left: 30%;
+    }
+}
+
+@media all and (max-width : 718px) {
+ .score {
+    margin: 0 30px;
+ }
+
+ .score h3 {
+    margin: 0 20px;
+ }
+ .laeb-div {
+    top: 300px;
+    left: 20px;
+   }
+
+   .qatar-text-div  , .qatar-word{
+    width: 20rem;
+    left: 25%;
+}
+}
+
+
+@media all and (max-width : 568px) {
+    .laeb-div {
+        width: 250px;
+        left: 10px;
+      }
+}
+
+@media all and (max-width : 496px) {
+    .qatar-text-div  , .qatar-word{
+        width: 15rem;
+        left: 25%;
+    }
+    .laeb-div {
+        top: 320px;
+        left: 10px;
+      }
+      .score {
+        margin: 0 20px;
+     }
+    
+     .score h3 {
+        margin: 0 15px;
+     }
+}
+
+
+@media all and (max-width: 464px) {
+    .qatar-text-div  , .qatar-word{
+        width: 15rem;
+        left: 20%;
+    }
+    .laeb-div {
+        top: 320px;
+        left: 10px;
+      }
+      .score {
+        margin: 0 10px;
+     }
+    
+     .score h3 {
+        margin: 0 10px;
+     }
+}
+
+
+@media all and (max-width : 402px) {
+    .qatar-text-div  , .qatar-word{
+        width: 15rem;
+        left: 18%;
+    }
+
+
+}
+
+@media all and (max-width : 362px) {
+    .qatar-text-div  , .qatar-word{
+        width: 13rem;
+        left: 15%;
+    }
+
+    .fixure-crest{
+
+        margin: 0 5px;
+        
+    
+    }
+
+    .score {
+        margin: 0 5px;
+     }
+    
+     .score h3 {
+        margin: 0 5px;
+     }
+
+     .section-title {
+        font-size: 30px;
+       
+    }
+}
+
+
+@media all and (max-width : 302px) {
+    
 }

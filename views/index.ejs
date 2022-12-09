@@ -94,17 +94,36 @@
                     <h3><%= matches[i].homeTeam.tla %>  </h3>
                     <img class="fixure-crest" src="<%= matches[i].homeTeam.crest %>" alt="">
                    </section>
-
+                               
                    <section class="score">
-                         <h3>
-                              -
-                         </h3>
-                         <h3>
-                            VS
-                         </h3>
-                         <h3>
-                            -
-                         </h3>
+                   <% if( matches[i].status   !== "FINISHED" &&  (matches[i].score.halfTime.home  !== null &&  matches[i].score.halfTime.away !== null ) ){ %>
+
+                        <h3>
+                            <%= matches[i].score.halfTime.home  %>
+                       </h3>
+                       <h3>
+                          VS
+                       </h3>
+                       <h3>
+                        <%= matches[i].score.halfTime.away  %>
+                    </h3>
+
+                                
+                   <% } else{ %>
+
+                    <h3>
+                         -
+                     </h3>
+                   <h3>
+                      VS
+                   </h3>
+                   <h3>
+                    -
+                </h3>
+
+
+                 <%  }  %>
+                         
                    </section>
 
                    <section class="team2">
