@@ -107,7 +107,18 @@
                        <h3>
                         <%= matches[i].score.halfTime.away  %>
                     </h3>
+                 <%    } else if(matches[i].status   === "FINISHED"){ %>
 
+
+                    <h3>
+                        <%= matches[i].score.fullTime.home  %>
+                   </h3>
+                   <h3>
+                      VS
+                   </h3>
+                   <h3>
+                    <%= matches[i].score.fullTime.away  %>
+                </h3>
                                 
                    <% } else{ %>
 
