@@ -235,7 +235,7 @@ backdrop-filter: blur(5px);
     /* border: 1px solid #811538; */
     width: fit-content;
     margin: 50px auto;
-    height: 50px;
+    height: 80px;
     font-family: 'Merienda', cursive;
     border-radius: 16px;
     background-color: papayawhip;
@@ -265,6 +265,7 @@ backdrop-filter: blur(5px);
     border-radius: 0 16px 16px 0;
 }
 .team1 h3  , .team2 h3 {
+    
     color: papayawhip;
      margin: 0 10px;
 }
@@ -278,6 +279,7 @@ backdrop-filter: blur(5px);
 }
 
 .score h3 {
+ 
     margin: 0 50px;
 }
 

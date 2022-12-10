@@ -96,6 +96,22 @@
                    </section>
                                
                    <section class="score">
+                    <% if(matches[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+                        
+                    <h3>
+                        <%= matches[i].score.regularTime.home  %> <br>
+                        (<%= matches[i].score.penalties.home %>)
+                   </h3>
+                   <h3>
+                      VS
+                   </h3>
+                   <h3>
+                    <%= matches[i].score.regularTime.away  %> <br>
+                    (<%= matches[i].score.penalties.away %>)
+
+                </h3>
+                         
+                   <% }else {%>
                    <% if( matches[i].status   !== "FINISHED" &&  (matches[i].score.halfTime.home  !== null &&  matches[i].score.halfTime.away !== null ) ){ %>
 
                         <h3>
@@ -134,6 +150,8 @@
 
 
                  <%  }  %>
+
+            <%} %>
                          
                    </section>
 
