@@ -230,6 +230,7 @@ backdrop-filter: blur(5px);
 }
 
 .match-fixure {
+    position: relative;
     display: flex;
     justify-content: space-between;
     /* border: 1px solid #811538; */
@@ -241,6 +242,8 @@ backdrop-filter: blur(5px);
     background-color: papayawhip;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
 }
+
+
 
 .fixure-crest {
     width: 30px;
@@ -279,12 +282,23 @@ backdrop-filter: blur(5px);
     width: 100%;
 } 
 
+
+
 /* .vs {
     margin: 0 50px;
 } */
 .score h3 {
  
     margin: 0 2%;
+}
+
+.live-sign {
+    position: absolute;
+    background-color: #811538;
+    color: papayawhip;
+    top: 2px;
+    font-size: 16px;
+    
 }
 
 

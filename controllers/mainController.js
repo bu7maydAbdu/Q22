@@ -29,7 +29,7 @@ module.exports = {
 
            const currentMatchesSearch = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
-           console.log(currentMatchesSearch)
+           console.log(currentMatchesSearch[currentMatchesSearch.length - 1])
 
              
         // console.log(matchesData.data.matches)

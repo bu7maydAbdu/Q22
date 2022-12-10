@@ -96,6 +96,11 @@
                    </section>
                                
                    <section class="score">
+                 <%   if (matches[i].status === 'IN_PLAY') { %>
+                               
+                       <h3 class="live-sign">Live</h3>
+    
+                     <% } %>
                     <% if(matches[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
                         
                     <h3>
@@ -123,7 +128,19 @@
                        <h3>
                         <%= matches[i].score.halfTime.away  %>
                     </h3>
-                 <%    } else if(matches[i].status   === "FINISHED"){ %>
+                 <%    } else if (matches[i].status === 'IN_PLAY') { %>
+                               
+                    <h3>
+                        <%= matches[i].score.fullTime.home  %>
+                   </h3>
+                   <h3 class="vs">
+                      VS
+                   </h3>
+                   <h3>
+                    <%= matches[i].score.fullTime.away  %>
+                </h3>
+
+                 <% } else if(matches[i].status   === "FINISHED"){ %>
 
 
                     <h3>
