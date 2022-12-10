@@ -99,15 +99,15 @@
                     <% if(matches[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
                         
                     <h3>
-                        <%= matches[i].score.regularTime.home  %> <br>
-                        (<%= matches[i].score.penalties.home %>)
+                        <%= matches[i].score.extraTime.home  + matches[i].score.regularTime.home  %> <br>
+                        (<%= matches[i].score.penalties.home %>) 
                    </h3>
-                   <h3>
+                   <h3 class="vs">
                       VS
                    </h3>
                    <h3>
-                    <%= matches[i].score.regularTime.away  %> <br>
-                    (<%= matches[i].score.penalties.away %>)
+                    <%= matches[i].score.extraTime.away + matches[i].score.regularTime.away %> <br>
+                   (<%= matches[i].score.penalties.away %>)
 
                 </h3>
                          
@@ -117,7 +117,7 @@
                         <h3>
                             <%= matches[i].score.halfTime.home  %>
                        </h3>
-                       <h3>
+                       <h3 class="vs">
                           VS
                        </h3>
                        <h3>
@@ -129,7 +129,7 @@
                     <h3>
                         <%= matches[i].score.fullTime.home  %>
                    </h3>
-                   <h3>
+                   <h3 class="vs">
                       VS
                    </h3>
                    <h3>
@@ -141,7 +141,7 @@
                     <h3>
                          -
                      </h3>
-                   <h3>
+                   <h3 class="vs">
                       VS
                    </h3>
                    <h3>
