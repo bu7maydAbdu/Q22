@@ -26,6 +26,8 @@ const teams = `${baseUrl}/teams`
 
 
 app.use("/", mainRoute)
+app.use("/team", teamRoute)
+
 
 // app.get("/", (req , res) => {
 //     axios.get(teams,{

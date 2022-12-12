@@ -1,9 +1,29 @@
 <%- include('partials/header') -%>
 
-<h1>All Teams</h1>
+<h1 class="section-title">All Teams</h1>
 
 
+<main class="teams-cards">
+    <% for(let i = 0 ; i < teamsCards.length ; i++) { %>
 
+        <section class="team-card">
+
+            <section class="crest-section">
+                <img class="card-crest" src="<%= teamsCards[i].crest %>" alt="">
+
+            </section>
+
+            <section class="card-info">
+                <h2 class="team-name"><%= teamsCards[i].name %></h2>
+                 <a href="/teams/<%= teamsCards[i].id %>"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                
+            </section>
+        </section>
+
+
+    <% } %>
+       
+</main>
 
 
 

@@ -57,11 +57,11 @@ module.exports = {
                  }
              })
  
-             // console.log(teamsData.data.season)
+             console.log(teamsData.data.teams[0])
  
           
      
-             res.render("allTeams.ejs")
+             res.render("allTeams.ejs", {teamsCards :  teamsData.data.teams})
          }catch(err){
              console.log(err)
          }
