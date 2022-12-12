@@ -27,9 +27,11 @@ module.exports = {
                 }
             })
 
+            console.log(teamsData.data.teams)
+
            const currentMatchesSearch = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
-           console.log(currentMatchesSearch[currentMatchesSearch.length - 1])
+        //    console.log(currentMatchesSearch[currentMatchesSearch.length - 1])
 
              
         // console.log(matchesData.data.matches)
@@ -43,6 +45,27 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
+      },
+
+      getAllTeams : async (req, res) => {
+
+        try{
+
+            const teamsData = await axios.get(teamsUrl,{
+                 headers: {
+                     "X-Auth-Token" : token
+                 }
+             })
+ 
+             // console.log(teamsData.data.season)
+ 
+          
+     
+             res.render("allTeams.ejs")
+         }catch(err){
+             console.log(err)
+         }
+
       }
 }
 

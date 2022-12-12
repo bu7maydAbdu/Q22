@@ -4,6 +4,8 @@ const mainController = require("../controllers/mainController")
 
 
 router.get("/", mainController.getMain)
+router.get("/allTeams", mainController.getAllTeams)
+
 
 
 
