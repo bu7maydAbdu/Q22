@@ -1,0 +1,99 @@
+<%- include('partials/header') -%>
+
+
+
+
+
+
+<section class="team-header">
+   
+    <section class="team-image-section">
+
+        <img class="team-image" src="<%= team[0].crest %>" alt="">
+    
+    
+    </section>
+
+
+    <section class="card-info">
+        <h2 class="team-name"><%= team[0].name %></h2>
+        
+    </section>
+
+
+</section>
+
+
+
+<h3 class="staff-title">Coach :</h3>
+
+    <section class="coach-section">
+         <h3>Name : <%= team[0].coach.name %> </h3>
+    </section>
+
+
+
+    <section class="players-section">
+       
+
+        <section class="attackers">
+            <h2 class = "roles-titles">Attackers</h2>
+            <% for(let i = 0 ; i < attackers.length ; i++) { %>
+
+                <h3 class = "player"><%= attackers[i].name %> </h3>
+
+        
+        
+            <% } %>
+
+        </section>
+
+
+        <section class="midfielders">
+            <h2 class = "roles-titles">Midfielders</h2>
+            <% for(let i = 0 ; i < midfielders.length ; i++) { %>
+
+                <h3 class = "player"><%= midfielders[i].name %> </h3>
+
+        
+        
+            <% } %>
+        </section>
+
+        <section class="defenders">
+                  <h2 class = "roles-titles">defenders</h2>
+            <% for(let i = 0 ; i < defenders.length ; i++) { %>
+
+                <h3 class = "player"><%= defenders[i].name %> </h3>
+
+        
+        
+            <% } %>
+
+        </section>
+
+         <section  class="goalkeepers">
+              <h2 class = "roles-titles">Goalkeepers</h2>
+            <% for(let i = 0 ; i < goalkeepers.length ; i++) { %>
+
+                <h3 class = "player"><%= goalkeepers[i].name %> </h3>
+
+        
+        
+            <% } %>
+
+         </section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer') -%>
+

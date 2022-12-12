@@ -27,7 +27,7 @@ module.exports = {
                 }
             })
 
-            console.log(teamsData.data.teams)
+            console.log(teamsData.data.teams[0])
 
            const currentMatchesSearch = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
