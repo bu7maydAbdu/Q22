@@ -1,0 +1,78 @@
+<%- include('partials/header') -%>
+
+
+<h1 class="section-title">group stage</h1>
+
+<section class="groups-section">
+  
+    <% for(let i = 0 ; i < tables.length ; i++){ %>
+
+        <table class="group">
+            <tr class="group-title">
+                <th colspan="5" class="group-name"> <%= tables[i].group   %></th>
+            </tr>
+            <tr class="column-definer">
+                <td>Team</td>
+                <td>W</td>
+                <td>L</td>
+                <td>D</td>
+                <td>Pts</td>
+
+
+            </tr>
+              
+
+            
+
+            <tr>
+                <td class="crest-tla"><img class="team-crest" src="<%= tables[i].table[0].team.crest %>" alt=""><%= tables[i].table[0].team.tla %></td>
+                <td><%= tables[i].table[0].won %></td>
+                <td><%= tables[i].table[0].lost %></td>
+                <td><%= tables[i].table[0].draw %></td>
+                <td><%= tables[i].table[0].points %></td>
+            </tr>
+
+            <tr>
+                <td class="crest-tla"><img class="team-crest" src="<%= tables[i].table[1].team.crest %>" alt=""><%= tables[i].table[1].team.tla %></td>
+                <td><%= tables[i].table[1].won %></td>
+                <td><%= tables[i].table[1].lost %></td>
+                <td><%= tables[i].table[1].draw %></td>
+                <td><%= tables[i].table[1].points %></td>
+            </tr>
+            <tr>
+                <td class="crest-tla"><img class="team-crest" src="<%= tables[i].table[2].team.crest %>" alt=""><%= tables[i].table[2].team.tla %></td>
+                <td><%= tables[i].table[2].won %></td>
+                <td><%= tables[i].table[2].lost %></td>
+                <td><%= tables[i].table[2].draw %></td>
+                <td><%= tables[i].table[2].points %></td>
+            </tr>
+            <tr>
+                <td class="crest-tla"><img class="team-crest" src="<%= tables[i].table[3].team.crest %>" alt=""><%= tables[i].table[3].team.tla %></td>
+                <td><%= tables[i].table[3].won %></td>
+                <td><%= tables[i].table[3].lost %></td>
+                <td><%= tables[i].table[3].draw %></td>
+                <td><%= tables[i].table[3].points %></td>
+            </tr>
+
+                       
+           
+
+       
+            
+           
+    
+    
+        </table>
+    
+    
+    
+    <% }  %>
+
+</section>
+
+
+
+
+
+
+<%- include('partials/footer') -%>

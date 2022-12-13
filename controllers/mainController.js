@@ -4,7 +4,7 @@ const axios = require("axios")
 
 const token = process.env.token
 const baseUrl = process.env.baseUrl
-const url = `${baseUrl}/standings`
+const standingsUrl = `${baseUrl}/standings`
 const teamsUrl = `${baseUrl}/teams`
 const matchesUrl = `${baseUrl}/matches`
 
@@ -36,7 +36,7 @@ module.exports = {
              
         // console.log(matchesData.data.matches)
          
-         await axios.get(url,{
+         await axios.get(standingsUrl,{
                 headers: {
                     "X-Auth-Token" : token
                 }
@@ -65,6 +65,34 @@ module.exports = {
          }catch(err){
              console.log(err)
          }
+
+      },
+
+      getAllGroups : async (req, res)  => {
+
+        try {
+            
+
+            const standings = await axios.get(standingsUrl,{
+                headers: {
+                    "X-Auth-Token" : token
+                }
+            })
+                
+            console.log(standings.data.standings[0])
+
+            res.render("groups.ejs" , {tables : standings.data.standings})
+
+            
+
+        }catch(err){
+
+
+            console.log(err)
+        }
+
+
+
 
       }
 }
