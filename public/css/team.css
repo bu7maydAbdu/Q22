@@ -14,7 +14,7 @@
 .team-image-section {
     
      
-    width:  400px ;
+    width:  100% ;
     height: 80%;
 }
 
@@ -50,11 +50,14 @@
 .players-section {
 
 
-    width: 80vw;
+    width: fit-content;
+    /* background-color: black; */
     /* border: 1px solid black; */
     display: grid;
     grid-template-columns:  1fr 1fr 1fr 1fr;
     margin-top: 50px;
+    grid-gap: 20px;
+    margin: 0 auto;
 }
 
 
@@ -63,8 +66,10 @@
 
 
     background-color: papayawhip;
-    margin: 0 50px;
+    margin: 50px auto;
     border-radius:  16px;
+    width: 250px;
+    height: 500px;
     /* border: 1px solid papayawhip; */
 
 }
@@ -85,4 +90,17 @@
     font-family: 'Merienda', cursive;
     color: #811538;
     /* background-color: black; */
+}
+
+
+@media all and (max-width : 1498px) {
+    .players-section  {
+        grid-template-columns:  1fr 1fr;
+    }
+}
+
+@media all and (max-width : 846px) {
+    .players-section  {
+        grid-template-columns:  1fr ;
+    }
 }
