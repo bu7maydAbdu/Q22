@@ -61,7 +61,15 @@ th, td {
   }
 
 
-/* 
-  @media all and (max-width : ) {
-    
-  } */
+
+  @media all and (max-width : 1459px ) {
+    .groups-section {
+        grid-template-columns:  1fr 1fr;
+    }
+  }
+
+  @media all and (max-width : 691px) {
+    .groups-section {
+        grid-template-columns:  1fr ;
+    }
+  }
