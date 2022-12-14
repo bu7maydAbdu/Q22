@@ -26,8 +26,9 @@ module.exports = {
                     "X-Auth-Token" : token
                 }
             })
-
-            console.log(teamsData.data.teams[0])
+                     
+            console.log(matchesData.data.matches[0])
+            // console.log(teamsData.data.teams[0])
 
            const currentMatchesSearch = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
@@ -94,6 +95,19 @@ module.exports = {
 
 
 
+      },
+
+
+      getAllMatches : async (req, res) => {
+
+
+        try{
+
+            res.render("allMatches.ejs")
+
+        }catch(err){
+            console.log(err)
+        }
       }
 }
 
