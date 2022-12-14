@@ -1,6 +1,93 @@
 <%- include('partials/header') -%>
 <h1>all matches</h1>
 
+<% for(let i=0; i < matches.length; i++) {%>
+                
+    <section class="match-fixure">
+         <section class="team1">
+          <h3><%= matches[i].homeTeam.tla %>  </h3>
+          <img class="fixure-crest" src="<%= matches[i].homeTeam.crest %>" alt="">
+         </section>
+                     
+         <section class="score">
+       <%   if (matches[i].status === 'IN_PLAY') { %>
+                     
+             <h3 class="live-sign">.Live</h3>
+
+           <% } %>
+          <% if(matches[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+              
+          <h3>
+              <%= matches[i].score.extraTime.home  + matches[i].score.regularTime.home  %> <br>
+              (<%= matches[i].score.penalties.home %>) 
+         </h3>
+         <h3 class="vs">
+            VS
+         </h3>
+         <h3>
+          <%= matches[i].score.extraTime.away + matches[i].score.regularTime.away %> <br>
+         (<%= matches[i].score.penalties.away %>)
+
+      </h3>
+               
+         <% }else {%>
+        <% if (matches[i].status === 'IN_PLAY') { %>
+                     
+          <h3>
+              <%= matches[i].score.fullTime.home  %>
+         </h3>
+         <h3 class="vs">
+            VS
+         </h3>
+         <h3>
+          <%= matches[i].score.fullTime.away  %>
+      </h3>
+
+       <% } else if(matches[i].status   === "FINISHED"){ %>
+
+
+          <h3>
+              <%= matches[i].score.fullTime.home  %>
+         </h3>
+         <h3 class="vs">
+            VS
+         </h3>
+         <h3>
+          <%= matches[i].score.fullTime.away  %>
+      </h3>
+                      
+         <% } else{ %>
+
+          <h3>
+               -
+           </h3>
+         <h3 class="vs">
+            VS
+         </h3>
+         <h3>
+          -
+      </h3>
+
+
+       <%  }  %>
+
+  <%} %>
+               
+         </section>
+
+         <section class="team2">
+          <h3><%= matches[i].awayTeam.tla %>  </h3>
+          <img class="fixure-crest" src="<%= matches[i].awayTeam.crest %>" alt="">
+         </section>
+      
+    </section>
+
+
+
+
+<% } %> 
+
+
 
 
 
