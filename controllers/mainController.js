@@ -72,6 +72,9 @@ module.exports = {
       getAllGroups : async (req, res)  => {
 
         try {
+
+
+            
             
 
             const standings = await axios.get(standingsUrl,{
@@ -102,8 +105,31 @@ module.exports = {
 
 
         try{
+            const teamsData = await axios.get(teamsUrl,{
+                headers: {
+                    "X-Auth-Token" : token
+                }
+            })
 
-            res.render("allMatches.ejs")
+
+
+            
+         const matchesData =   await axios.get(matchesUrl,{
+            headers: {
+                "X-Auth-Token" : token
+            }
+        })
+                 
+        console.log(matchesData.data)
+        // console.log(teamsData.data.teams[0])
+      const sortedMatches = await matchesData.data.matches.sort((a,b)  => b.matchday - a.matchday)
+      console.log(sortedMatches[0])
+        
+        await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
+
+    //    const currentMatchesSearch = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
+
+            res.render("allMatches.ejs", { matches : sortedMatches})
 
         }catch(err){
             console.log(err)
