@@ -1,97 +1,759 @@
 <%- include('partials/header') -%>
+<section class="burger-menu-logo">
+   <i class="fa-solid fa-bars "></i>
+   <h1 class="site-logo">HayaFooty</h1>
+</section>
+<aside class="sideBar ">
+   <section class=" top-side-bar">
+       <h1 class="site-logo" style="margin-top: 10px ;">HayaFooty</h1>
 
+       <i class="fa-solid fa-xmark"></i>
+   </section>
+   
+  <nav class="nav-section">
+   <ul>
+       <a href="/"><li>Home</li></a>
+       <a href="/allTeams"><li>All Teams</li></a>
+       <a href="/allMatches"><li>All Matches</li></a>
+      <a href="/groups"><li>Groups</li></a> 
+      <!-- <a href=""><li>Stats</li></a>  -->
+     </ul>
+  </nav>
+   
+</aside>
 
 
 <section class="next-fixures-section" style=" width : 100vw">
-   <h1 class="section-title bg-primary purpleborder">All Matches</h1>
    <section class="next-fixures-inner" style="width : 100%">
-
-   <% for(let i=0; i < matches.length; i++) {%>
-                
-    <section class="match-fixure">
-         <section class="team1">
-          <h3><%= matches[i].homeTeam.tla %>  </h3>
-          <img class="fixure-crest" src="<%= matches[i].homeTeam.crest %>" alt="">
-         </section>
-                     
-         <section class="score">
-       <%   if (matches[i].status === 'IN_PLAY') { %>
-                     
-             <h3 class="live-sign">.Live</h3>
-
-           <% } %>
-          <% if(matches[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
-              
-          <h3>
-              <%= matches[i].score.extraTime.home  + matches[i].score.regularTime.home  %> <br>
-              (<%= matches[i].score.penalties.home %>) 
-         </h3>
-         <h3 class="vs">
-            VS
-         </h3>
-         <h3>
-          <%= matches[i].score.extraTime.away + matches[i].score.regularTime.away %> <br>
-         (<%= matches[i].score.penalties.away %>)
-
-      </h3>
-               
-         <% }else {%>
-        <% if (matches[i].status === 'IN_PLAY') { %>
-                     
-          <h3>
-              <%= matches[i].score.fullTime.home  %>
-         </h3>
-         <h3 class="vs">
-            VS
-         </h3>
-         <h3>
-          <%= matches[i].score.fullTime.away  %>
-      </h3>
-
-       <% } else if(matches[i].status   === "FINISHED"){ %>
-
-
-          <h3>
-              <%= matches[i].score.fullTime.home  %>
-         </h3>
-         <h3 class="vs">
-            VS
-         </h3>
-         <h3>
-          <%= matches[i].score.fullTime.away  %>
-      </h3>
-                      
-         <% } else{ %>
-
-          <h3>
-               -
-           </h3>
-         <h3 class="vs">
-            VS
-         </h3>
-         <h3>
-          -
-      </h3>
-
-
-       <%  }  %>
-
-  <%} %>
-               
-         </section>
-
-         <section class="team2">
-          <h3><%= matches[i].awayTeam.tla %>  </h3>
-          <img class="fixure-crest" src="<%= matches[i].awayTeam.crest %>" alt="">
-         </section>
       
-    </section>
+      <h1 class="section-title bg-primary purpleborder">All Matches</h1>
+
+<!-- matchday 8 -->
+
+      
+<h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;"> Final <br> matchday 8</h2>
+
+<% for(let i=0; i < matchdayEight.length; i++) {%>
+                
+   <section class="match-fixure">
+        <section class="team1">
+         <h3><%= matchdayEight[i].homeTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayEight[i].homeTeam.crest %>" alt="">
+        </section>
+                    
+        <section class="score">
+      <%   if (matchdayEight[i].status === 'IN_PLAY') { %>
+                    
+            <h3 class="live-sign">.Live</h3>
+
+          <% } %>
+         <% if(matchdayEight[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+             
+         <h3>
+             <%= matchdayEight[i].score.extraTime.home  + matchdayEight[i].score.regularTime.home  %> <br>
+             (<%= matchdayEight[i].score.penalties.home %>) 
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayEight[i].score.extraTime.away + matchdayEight[i].score.regularTime.away %> <br>
+        (<%= matchdayEight[i].score.penalties.away %>)
+
+     </h3>
+              
+        <% }else {%>
+       <% if (matchdayEight[i].status === 'IN_PLAY') { %>
+                    
+         <h3>
+             <%= matchdayEight[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayEight[i].score.fullTime.away  %>
+     </h3>
+
+      <% } else if(matchdayEight[i].status   === "FINISHED"){ %>
+
+
+         <h3>
+             <%= matchdayEight[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayEight[i].score.fullTime.away  %>
+     </h3>
+                     
+        <% } else{ %>
+
+         <h3>
+              -
+          </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         -
+     </h3>
+
+
+      <%  }  %>
+
+ <%} %>
+              
+        </section>
+
+        <section class="team2">
+         <h3><%= matchdayEight[i].awayTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayEight[i].awayTeam.crest %>" alt="">
+        </section>
+     
+   </section>
 
 
 
 
 <% } %> 
+
+<!-- matchday 7 -->
+
+<h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;"> Bronze Medal <br> matchday 7</h2>
+
+<% for(let i=0; i < matchdaySeven.length; i++) {%>
+                
+   <section class="match-fixure">
+        <section class="team1">
+         <h3><%= matchdaySeven[i].homeTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdaySeven[i].homeTeam.crest %>" alt="">
+        </section>
+                    
+        <section class="score">
+      <%   if (matchdaySeven[i].status === 'IN_PLAY') { %>
+                    
+            <h3 class="live-sign">.Live</h3>
+
+          <% } %>
+         <% if(matchdaySeven[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+             
+         <h3>
+             <%= matchdaySeven[i].score.extraTime.home  + matchdaySeven[i].score.regularTime.home  %> <br>
+             (<%= matchdaySeven[i].score.penalties.home %>) 
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdaySeven[i].score.extraTime.away + matchdaySeven[i].score.regularTime.away %> <br>
+        (<%= matchdaySeven[i].score.penalties.away %>)
+
+     </h3>
+              
+        <% }else {%>
+       <% if (matchdaySeven[i].status === 'IN_PLAY') { %>
+                    
+         <h3>
+             <%= matchdaySeven[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdaySeven[i].score.fullTime.away  %>
+     </h3>
+
+      <% } else if(matchdaySeven[i].status   === "FINISHED"){ %>
+
+
+         <h3>
+             <%= matchdaySeven[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdaySeven[i].score.fullTime.away  %>
+     </h3>
+                     
+        <% } else{ %>
+
+         <h3>
+              -
+          </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         -
+     </h3>
+
+
+      <%  }  %>
+
+ <%} %>
+              
+        </section>
+
+        <section class="team2">
+         <h3><%= matchdaySeven[i].awayTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdaySeven[i].awayTeam.crest %>" alt="">
+        </section>
+     
+   </section>
+
+
+
+
+<% } %> 
+
+
+<!-- matchday 6 -->
+
+<h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;"> Semi Final <br> matchday 6</h2>
+
+<% for(let i=0; i < matchdaySix.length; i++) {%>
+                
+   <section class="match-fixure">
+        <section class="team1">
+         <h3><%= matchdaySix[i].homeTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdaySix[i].homeTeam.crest %>" alt="">
+        </section>
+                    
+        <section class="score">
+      <%   if (matchdaySix[i].status === 'IN_PLAY') { %>
+                    
+            <h3 class="live-sign">.Live</h3>
+
+          <% } %>
+         <% if(matchdaySix[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+             
+         <h3>
+             <%= matchdaySix[i].score.extraTime.home  + matchdaySix[i].score.regularTime.home  %> <br>
+             (<%= matchdaySix[i].score.penalties.home %>) 
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdaySix[i].score.extraTime.away + matchdaySix[i].score.regularTime.away %> <br>
+        (<%= matchdaySix[i].score.penalties.away %>)
+
+     </h3>
+              
+        <% }else {%>
+       <% if (matchdaySix[i].status === 'IN_PLAY') { %>
+                    
+         <h3>
+             <%= matchdaySix[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdaySix[i].score.fullTime.away  %>
+     </h3>
+
+      <% } else if(matchdaySix[i].status   === "FINISHED"){ %>
+
+
+         <h3>
+             <%= matchdaySix[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdaySix[i].score.fullTime.away  %>
+     </h3>
+                     
+        <% } else{ %>
+
+         <h3>
+              -
+          </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         -
+     </h3>
+
+
+      <%  }  %>
+
+ <%} %>
+              
+        </section>
+
+        <section class="team2">
+         <h3><%= matchdaySix[i].awayTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdaySix[i].awayTeam.crest %>" alt="">
+        </section>
+     
+   </section>
+
+
+
+
+<% } %> 
+
+<!-- matchday 5 -->
+
+<h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;"> Quarter Final <br> matchday 5</h2>
+
+<% for(let i=0; i < matchdayFive.length; i++) {%>
+                
+   <section class="match-fixure">
+        <section class="team1">
+         <h3><%= matchdayFive[i].homeTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayFive[i].homeTeam.crest %>" alt="">
+        </section>
+                    
+        <section class="score">
+      <%   if (matchdayFive[i].status === 'IN_PLAY') { %>
+                    
+            <h3 class="live-sign">.Live</h3>
+
+          <% } %>
+         <% if(matchdayFive[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+             
+         <h3>
+             <%= matchdayFive[i].score.extraTime.home  + matchdayFive[i].score.regularTime.home  %> <br>
+             (<%= matchdayFive[i].score.penalties.home %>) 
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayFive[i].score.extraTime.away + matchdayFive[i].score.regularTime.away %> <br>
+        (<%= matchdayFive[i].score.penalties.away %>)
+
+     </h3>
+              
+        <% }else {%>
+       <% if (matchdayFive[i].status === 'IN_PLAY') { %>
+                    
+         <h3>
+             <%= matchdayFive[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayFive[i].score.fullTime.away  %>
+     </h3>
+
+      <% } else if(matchdayFive[i].status   === "FINISHED"){ %>
+
+
+         <h3>
+             <%= matchdayFive[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayFive[i].score.fullTime.away  %>
+     </h3>
+                     
+        <% } else{ %>
+
+         <h3>
+              -
+          </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         -
+     </h3>
+
+
+      <%  }  %>
+
+ <%} %>
+              
+        </section>
+
+        <section class="team2">
+         <h3><%= matchdayFive[i].awayTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayFive[i].awayTeam.crest %>" alt="">
+        </section>
+     
+   </section>
+
+
+
+
+<% } %> 
+
+<!-- matchday 4 -->
+
+<h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;">Round Of 16 <br> matchday 4</h2>
+
+<% for(let i=0; i < matchdayFour.length; i++) {%>
+                
+   <section class="match-fixure">
+        <section class="team1">
+         <h3><%= matchdayFour[i].homeTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayFour[i].homeTeam.crest %>" alt="">
+        </section>
+                    
+        <section class="score">
+      <%   if (matchdayFour[i].status === 'IN_PLAY') { %>
+                    
+            <h3 class="live-sign">.Live</h3>
+
+          <% } %>
+         <% if(matchdayFour[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+             
+         <h3>
+             <%= matchdayFour[i].score.extraTime.home  + matchdayFour[i].score.regularTime.home  %> <br>
+             (<%= matchdayFour[i].score.penalties.home %>) 
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayFour[i].score.extraTime.away + matchdayFour[i].score.regularTime.away %> <br>
+        (<%= matchdayFour[i].score.penalties.away %>)
+
+     </h3>
+              
+        <% }else {%>
+       <% if (matchdayFour[i].status === 'IN_PLAY') { %>
+                    
+         <h3>
+             <%= matchdayFour[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayFour[i].score.fullTime.away  %>
+     </h3>
+
+      <% } else if(matchdayFour[i].status   === "FINISHED"){ %>
+
+
+         <h3>
+             <%= matchdayFour[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayFour[i].score.fullTime.away  %>
+     </h3>
+                     
+        <% } else{ %>
+
+         <h3>
+              -
+          </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         -
+     </h3>
+
+
+      <%  }  %>
+
+ <%} %>
+              
+        </section>
+
+        <section class="team2">
+         <h3><%= matchdayFour[i].awayTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayFour[i].awayTeam.crest %>" alt="">
+        </section>
+     
+   </section>
+
+
+
+
+<% } %> 
+
+<!-- matchday 3 -->
+
+<h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;">Group Stage <br> matchday 3</h2>
+
+<% for(let i=0; i < matchdayThree.length; i++) {%>
+                
+   <section class="match-fixure">
+        <section class="team1">
+         <h3><%= matchdayThree[i].homeTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayThree[i].homeTeam.crest %>" alt="">
+        </section>
+                    
+        <section class="score">
+      <%   if (matchdayThree[i].status === 'IN_PLAY') { %>
+                    
+            <h3 class="live-sign">.Live</h3>
+
+          <% } %>
+         <% if(matchdayThree[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+             
+         <h3>
+             <%= matchdayThree[i].score.extraTime.home  + matchdayThree[i].score.regularTime.home  %> <br>
+             (<%= matchdayThree[i].score.penalties.home %>) 
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayThree[i].score.extraTime.away + matchdayThree[i].score.regularTime.away %> <br>
+        (<%= matchdayThree[i].score.penalties.away %>)
+
+     </h3>
+              
+        <% }else {%>
+       <% if (matchdayThree[i].status === 'IN_PLAY') { %>
+                    
+         <h3>
+             <%= matchdayThree[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayThree[i].score.fullTime.away  %>
+     </h3>
+
+      <% } else if(matchdayThree[i].status   === "FINISHED"){ %>
+
+
+         <h3>
+             <%= matchdayThree[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayThree[i].score.fullTime.away  %>
+     </h3>
+                     
+        <% } else{ %>
+
+         <h3>
+              -
+          </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         -
+     </h3>
+
+
+      <%  }  %>
+
+ <%} %>
+              
+        </section>
+
+        <section class="team2">
+         <h3><%= matchdayThree[i].awayTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayThree[i].awayTeam.crest %>" alt="">
+        </section>
+     
+   </section>
+
+
+
+
+<% } %> 
+
+
+<!-- matchday 2 -->
+<h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;">Group Stage <br> matchday 2</h2>
+
+<% for(let i=0; i < matchdayTwo.length; i++) {%>
+                
+   <section class="match-fixure">
+        <section class="team1">
+         <h3><%= matchdayTwo[i].homeTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayTwo[i].homeTeam.crest %>" alt="">
+        </section>
+                    
+        <section class="score">
+      <%   if (matchdayTwo[i].status === 'IN_PLAY') { %>
+                    
+            <h3 class="live-sign">.Live</h3>
+
+          <% } %>
+         <% if(matchdayTwo[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+             
+         <h3>
+             <%= matchdayTwo[i].score.extraTime.home  + matchdayTwo[i].score.regularTime.home  %> <br>
+             (<%= matchdayTwo[i].score.penalties.home %>) 
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayTwo[i].score.extraTime.away + matchdayTwo[i].score.regularTime.away %> <br>
+        (<%= matchdayTwo[i].score.penalties.away %>)
+
+     </h3>
+              
+        <% }else {%>
+       <% if (matchdayTwo[i].status === 'IN_PLAY') { %>
+                    
+         <h3>
+             <%= matchdayTwo[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayTwo[i].score.fullTime.away  %>
+     </h3>
+
+      <% } else if(matchdayTwo[i].status   === "FINISHED"){ %>
+
+
+         <h3>
+             <%= matchdayTwo[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayTwo[i].score.fullTime.away  %>
+     </h3>
+                     
+        <% } else{ %>
+
+         <h3>
+              -
+          </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         -
+     </h3>
+
+
+      <%  }  %>
+
+ <%} %>
+              
+        </section>
+
+        <section class="team2">
+         <h3><%= matchdayTwo[i].awayTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayTwo[i].awayTeam.crest %>" alt="">
+        </section>
+     
+   </section>
+
+
+
+
+<% } %> 
+
+<h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;">Group Stage <br> matchday 1</h2>
+
+<% for(let i=0; i < matchdayOne.length; i++) {%>
+                
+   <section class="match-fixure">
+        <section class="team1">
+         <h3><%= matchdayOne[i].homeTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayOne[i].homeTeam.crest %>" alt="">
+        </section>
+                    
+        <section class="score">
+      <%   if (matchdayOne[i].status === 'IN_PLAY') { %>
+                    
+            <h3 class="live-sign">.Live</h3>
+
+          <% } %>
+         <% if(matchdayOne[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+             
+         <h3>
+             <%= matchdayOne[i].score.extraTime.home  + matchdayOne[i].score.regularTime.home  %> <br>
+             (<%= matchdayOne[i].score.penalties.home %>) 
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayOne[i].score.extraTime.away + matchdayOne[i].score.regularTime.away %> <br>
+        (<%= matchdayOne[i].score.penalties.away %>)
+
+     </h3>
+              
+        <% }else {%>
+       <% if (matchdayOne[i].status === 'IN_PLAY') { %>
+                    
+         <h3>
+             <%= matchdayOne[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayOne[i].score.fullTime.away  %>
+     </h3>
+
+      <% } else if(matchdayOne[i].status   === "FINISHED"){ %>
+
+
+         <h3>
+             <%= matchdayOne[i].score.fullTime.home  %>
+        </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         <%= matchdayOne[i].score.fullTime.away  %>
+     </h3>
+                     
+        <% } else{ %>
+
+         <h3>
+              -
+          </h3>
+        <h3 class="vs">
+           VS
+        </h3>
+        <h3>
+         -
+     </h3>
+
+
+      <%  }  %>
+
+ <%} %>
+              
+        </section>
+
+        <section class="team2">
+         <h3><%= matchdayOne[i].awayTeam.tla %>  </h3>
+         <img class="fixure-crest" src="<%= matchdayOne[i].awayTeam.crest %>" alt="">
+        </section>
+     
+   </section>
+
+
+
+
+<% } %> 
+
+
+
 </section>
+
+
+
 </section>
 
 

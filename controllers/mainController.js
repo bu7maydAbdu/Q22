@@ -125,11 +125,27 @@ module.exports = {
       const sortedMatches = await matchesData.data.matches.sort((a,b)  => b.matchday - a.matchday)
       console.log(sortedMatches[0])
         
+      const matchdayOne =  await matchesData.data.matches.filter(item => item.matchday === 1).sort((a,b) => a.utcDate - b.utcDate) 
+      const matchdayTwo =  await matchesData.data.matches.filter(item => item.matchday === 2)
+      const matchdayThree =  await matchesData.data.matches.filter(item => item.matchday === 3)
+      const matchdayFour =  await matchesData.data.matches.filter(item => item.matchday === 4)
+      const matchdayFive =  await matchesData.data.matches.filter(item => item.matchday === 5)
+      const matchdaySix =  await matchesData.data.matches.filter(item => item.matchday === 6)
+      const matchdaySeven =  await matchesData.data.matches.filter(item => item.matchday === 7)
+      const matchdayEight =  await matchesData.data.matches.filter(item => item.matchday === 8)
+
+
+
+
+
+
+
+        
         await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
     //    const currentMatchesSearch = await matchesData.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
-            res.render("allMatches.ejs", { matches : sortedMatches})
+            res.render("allMatches.ejs", { matches : sortedMatches, matchdayOne : matchdayOne , matchdayTwo : matchdayTwo , matchdayThree : matchdayThree , matchdayFour : matchdayFour , matchdayFive : matchdayFive , matchdaySix : matchdaySix , matchdaySeven : matchdaySeven , matchdayEight : matchdayEight})
 
         }catch(err){
             console.log(err)
