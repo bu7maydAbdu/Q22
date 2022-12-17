@@ -119,6 +119,11 @@
 
 
         <% for(let i=0; i < matches.length; i++) {%>
+            <%  const time = new Date (matches[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()    %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>   
                 
               <section class="match-fixure">
                    <section class="team1">

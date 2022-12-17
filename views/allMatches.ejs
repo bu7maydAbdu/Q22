@@ -26,7 +26,7 @@
 <section class="next-fixures-section" style=" width : 100vw">
    <section class="next-fixures-inner" style="width : 100%">
       
-      <h1 class="section-title bg-primary purpleborder">All Matches</h1>
+      <h1 class="section-title bg-primary purpleborder"  style="margin-top: 50px;">All Matches</h1>
 
 <!-- matchday 8 -->
 
@@ -34,8 +34,13 @@
 <h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;"> Final <br> matchday 8</h2>
 
 <% for(let i=0; i < matchdayEight.length; i++) {%>
-                
+   <%  const time = new Date (matchdayEight[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()    %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>   
    <section class="match-fixure">
+
         <section class="team1">
          <h3><%= matchdayEight[i].homeTeam.tla %>  </h3>
          <img class="fixure-crest" src="<%= matchdayEight[i].homeTeam.crest %>" alt="">
@@ -124,6 +129,12 @@
 <h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;"> Bronze Medal <br> matchday 7</h2>
 
 <% for(let i=0; i < matchdaySeven.length; i++) {%>
+
+   <%  const time = new Date (matchdaySeven[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()    %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>   
                 
    <section class="match-fixure">
         <section class="team1">
@@ -215,6 +226,12 @@
 <h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;"> Semi Final <br> matchday 6</h2>
 
 <% for(let i=0; i < matchdaySix.length; i++) {%>
+
+   <%  const time = new Date (matchdaySix[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()    %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>    
                 
    <section class="match-fixure">
         <section class="team1">
@@ -305,6 +322,12 @@
 <h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;"> Quarter Final <br> matchday 5</h2>
 
 <% for(let i=0; i < matchdayFive.length; i++) {%>
+
+   <%  const time = new Date (matchdayFive[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()    %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>  
                 
    <section class="match-fixure">
         <section class="team1">
@@ -395,6 +418,12 @@
 <h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;">Round Of 16 <br> matchday 4</h2>
 
 <% for(let i=0; i < matchdayFour.length; i++) {%>
+
+   <%  const time = new Date (matchdayFour[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()   %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>  
                 
    <section class="match-fixure">
         <section class="team1">
@@ -485,6 +514,12 @@
 <h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;">Group Stage <br> matchday 3</h2>
 
 <% for(let i=0; i < matchdayThree.length; i++) {%>
+
+   <%  const time = new Date (matchdayThree[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()   %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>  
                 
    <section class="match-fixure">
         <section class="team1">
@@ -575,6 +610,12 @@
 <h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;">Group Stage <br> matchday 2</h2>
 
 <% for(let i=0; i < matchdayTwo.length; i++) {%>
+
+   <%  const time = new Date (matchdayTwo[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()  %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>  
                 
    <section class="match-fixure">
         <section class="team1">
@@ -663,6 +704,12 @@
 <h2 class="section-title bg-primary papaya " style="background-color: #811537ee; width:fit-content; height: fit-content; padding: 0 5%; border-radius: 16px;">Group Stage <br> matchday 1</h2>
 
 <% for(let i=0; i < matchdayOne.length; i++) {%>
+
+   <%  const time = new Date (matchdayOne[i].utcDate)   %>
+   <%  const DateSt =  time.getUTCDate()   + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear() %>
+
+
+   <h3 class="match-time"><%= DateSt  %></h3>  
                 
    <section class="match-fixure">
         <section class="team1">
