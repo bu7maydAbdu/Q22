@@ -21,7 +21,7 @@ getTopScorers : async (req, res) => {
             }
         })
     
-        console.log(topScorersData.data)
+        console.log(topScorersData.data.scorers)
 
 
         res.render("playersStats.ejs" , {playersStats : topScorersData.data.scorers})
