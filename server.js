@@ -6,6 +6,7 @@ const cors = require("cors")
 require('dotenv').config({path: './config/.env'})
 const mainRoute = require("./routes/main")
 const teamRoute = require("./routes/team")
+const statsRoute = require("./routes/stats")
 
 
 
@@ -28,6 +29,8 @@ const teams = `${baseUrl}/teams`
 
 app.use("/", mainRoute)
 app.use("/teams", teamRoute)
+app.use("/stats", statsRoute)
+
 
 
 // app.get("/", (req , res) => {
